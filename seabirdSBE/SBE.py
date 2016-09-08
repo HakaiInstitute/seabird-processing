@@ -29,25 +29,18 @@ class SBE(object):
             bin: The bin directory containing all SBE functions
             temp_path: Temp directory
             xmlcon
-            psa_align_ctd
-            psa_bin_avg
-            psa_cell_thermal_mass
-            psa_dat_cnv
-            psa_derive
-            psa_derive_teos10
-            psa_filter
-            psa_loop_edit
-            psa_sea_plot
-            psa_section
+            psa_align_ctd, psa_bin_avg, psa_cell_thermal_mass
+            psa_dat_cnv, psa_derive, psa_derive_teos10
+            psa_filter, psa_loop_edit, psa_sea_plot, psa_section
             psa_wild_edit
         """
-        super(SBE, self).__init__(*args, **kwargs)
+        super(SBE, self).__init__()
         # Path to SBE installation
         dflt_bin = 'c:\Program Files (x86)\Sea-Bird\SBEDataProcessing-Win32'
-        self._sbe_path = kwargs.get('bin', default=dflt_bin)
+        self._sbe_path = kwargs.get('bin', dflt_bin)
 
         # Temporary directory to store generated files
-        self._temp_dir = kwargs.get('temp_path', default=os.getenv('TEMP'))
+        self._temp_dir = kwargs.get('temp_path', os.getenv('TEMP'))
 
         # Default config files
         self._xmlcon = kwargs.get('xmlcon')
