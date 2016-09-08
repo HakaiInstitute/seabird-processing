@@ -47,18 +47,18 @@ cwd = os.path.dirname(__file__)
 sbe = SBE(
     bin='c:\Program Files (x86)\Sea-Bird\SBEDataProcessing-Win32', #default
     temp_path=os.getenv('TEMP'), #default
-    xmlcon=os.join(cwd, 'xmlcon', '19-7467.xmlcon'),
-    psa_align_ctd=os.join(cwd, 'psa', 'AlignCTD.psa'),
-    psa_bin_avg=os.join(cwd, 'psa', 'BinAvg.psa'),
-    psa_cell_thermal_mass=os.join(cwd, 'psa', 'CellTM.psa'),
-    psa_dat_cnv=os.join(cwd, 'psa', 'DatCnv.psa'),
-    psa_derive=os.join(cwd, 'psa', 'Derive.psa'),
-    psa_derive_teos10=os.join(cwd, 'psa', 'DeriveTEOS_10.psa'),
-    psa_filter=os.join(cwd, 'psa', 'Filter.psa'),
-    psa_loop_edit=os.join(cwd, 'psa', 'LoopEdit.psa'),
-    psa_sea_plot=os.join(cwd, 'psa', 'SeaPlot.psa'),
-    psa_section=os.join(cwd, 'psa', 'Section.psa'),
-    psa_wild_edit=os.join(cwd, 'psa', 'WildEdit.psa')
+    xmlcon=os.path.join(cwd, 'xmlcon', '19-7467.xmlcon'),
+    psa_align_ctd=os.path.join(cwd, 'psa', 'AlignCTD.psa'),
+    psa_bin_avg=os.path.join(cwd, 'psa', 'BinAvg.psa'),
+    psa_cell_thermal_mass=os.path.join(cwd, 'psa', 'CellTM.psa'),
+    psa_dat_cnv=os.path.join(cwd, 'psa', 'DatCnv.psa'),
+    psa_derive=os.path.join(cwd, 'psa', 'Derive.psa'),
+    psa_derive_teos10=os.path.join(cwd, 'psa', 'DeriveTEOS_10.psa'),
+    psa_filter=os.path.join(cwd, 'psa', 'Filter.psa'),
+    psa_loop_edit=os.path.join(cwd, 'psa', 'LoopEdit.psa'),
+    psa_sea_plot=os.path.join(cwd, 'psa', 'SeaPlot.psa'),
+    psa_section=os.path.join(cwd, 'psa', 'Section.psa'),
+    psa_wild_edit=os.path.join(cwd, 'psa', 'WildEdit.psa')
 )
 
 # Execute a SBE method on some file data
@@ -85,8 +85,8 @@ sbe = SBE()  # Using default bin and temp locations here
 
 # Execute a SBE method on some file data
 with open('./seabird_data_file.hex', 'r') as hexfile:
-  xmlcon = os.join(cwd, 'xmlcon', '19-7467.xmlcon')
-  psa_dat_cnv=os.join(cwd, 'psa', 'DatCnv.psa')
+  xmlcon = os.path.join(cwd, 'xmlcon', '19-7467.xmlcon')
+  psa_dat_cnv=os.path.join(cwd, 'psa', 'DatCnv.psa')
 
   cnvfile = sbe.dat_cnv(hexfile, xmlcon, psa_dat_cnv)
 
