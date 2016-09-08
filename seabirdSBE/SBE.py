@@ -41,7 +41,7 @@ class SBE(object):
             psa_section
             psa_wild_edit
         """
-        super(SBE, self).__init__(*args, **kwargs)
+        super(SBE, self).__init__()
         # Path to SBE installation
         dflt_bin = 'c:\Program Files (x86)\Sea-Bird\SBEDataProcessing-Win32'
         self._sbe_path = kwargs.get('bin', default=dflt_bin)
