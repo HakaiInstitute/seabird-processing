@@ -1,4 +1,4 @@
-# Seabird-SBE
+# Seabird-SBE _beta_
 
 Python bindings for executing Seabird SBE processing tools.
 
@@ -102,7 +102,7 @@ with open('./seabird_data_file.hex', 'r') as hexfile:
 
 An installation of the [Seabird Processing Suite](http://www.seabird.com/software/software) is required to run these modules since they simply provide a convenient abstraction of the command line options built into the software. The Seabird software itself requires an installation of Windows 7+.
 
-To install this tool in your current python environment do `pip install seabirdSBE`
+To install this tool in your current python environment do `pip install -i https://testpypi.python.org/pypi seabirdSBE`
 
 ### Copyright and Licensing Information
 
