@@ -2,12 +2,12 @@ from distutils.core import setup
 setup(
     name='seabirdSBE',
     packages=['seabirdSBE'],
-    version='0.0.2',
+    version='0.0.3',
     description='An abstraction of SBE command line exec utils for python',
     author='Taylor Denouden',
     author_email='taylordenouden@gmail.com',
     url='https://github.com/HakaiInstitute/seabirdSBE',
-    download_url='https://github.com/HakaiInstitute/seabirdSBE/tarball/0.0.2',
+    download_url='https://github.com/HakaiInstitute/seabirdSBE/tarball/0.0.3',
     keywords=['seabird', 'ctd', 'sbe', 'hakai'],
     classifiers=[],
 )
