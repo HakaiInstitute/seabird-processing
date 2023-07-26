@@ -14,4 +14,4 @@ Copyright (c) 2016 Hakai Institute and Contributors All Rights Reserved.
 
 from SBE import SBE
 
-__all__ = ['SBE']
+__all__ = ["SBE"]
