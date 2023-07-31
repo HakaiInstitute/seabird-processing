@@ -58,7 +58,6 @@ class _FuncConfig(_SBEConfig):
     def __init__(self,
                  xmlcon: FilePath,
                  psa: FilePath,
-                 output_dir: DirectoryPath,
                  **kwargs
         ):
         super().__init__(xmlcon=xmlcon, psa=psa, **kwargs)
