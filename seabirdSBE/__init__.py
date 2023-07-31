@@ -12,6 +12,34 @@ Last updated: September 2016
 Copyright (c) 2016 Hakai Institute and Contributors All Rights Reserved.
 """
 
-from SBE import SBE
+from seabirdSBE import configs
+from seabirdSBE.commands import (
+    sbe_align_ctd,
+    sbe_bin_avg,
+    sbe_cell_thermal_mass,
+    sbe_dat_cnv,
+    sbe_derive,
+    sbe_derive_teos10,
+    sbe_filter,
+    sbe_loop_edit,
+    sbe_sea_plot,
+    sbe_section,
+    sbe_wild_edit,
+)
+from seabirdSBE.pipeline import Pipeline
 
-__all__ = ["SBE"]
+__all__ = [
+    "configs",
+    "sbe_align_ctd",
+    "sbe_bin_avg",
+    "sbe_cell_thermal_mass",
+    "sbe_dat_cnv",
+    "sbe_derive",
+    "sbe_derive_teos10",
+    "sbe_filter",
+    "sbe_loop_edit",
+    "sbe_sea_plot",
+    "sbe_section",
+    "sbe_wild_edit",
+    "Pipeline",
+]
