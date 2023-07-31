@@ -1,5 +1,5 @@
 """
-Logger for seabirdSBE package
+Logger for seabird-sbe package
 """
 import logging
 

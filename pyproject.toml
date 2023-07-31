@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "seabirdsbe"
+name = "seabird-sbe"
 version = "0.0.0"
 description = "Python interface for calling Seabird SBE comands"
 authors = ["Taylor Denouden <taylordenouden@gmail.com>"]

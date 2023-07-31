@@ -11,9 +11,9 @@ files are not stored on the local file system.
 from pathlib import Path
 from typing import Union
 
-from seabirdSBE.configs import AlignCTDConfig, BinAvgConfig, CellTMConfig, \
+from seabird_sbe.configs import (AlignCTDConfig, BinAvgConfig, CellTMConfig, \
     DatCnvConfig, DeriveConfig, DeriveTEOS10Config, FilterConfig, LoopEditConfig, \
-    SeaPlotConfig, SectionConfig, WildEditConfig
+    SeaPlotConfig, SectionConfig, WildEditConfig)
 
 
 def sbe_align_ctd(data: str, xmlcon: Union[Path, str] = None, psa: Union[Path, str] = None):

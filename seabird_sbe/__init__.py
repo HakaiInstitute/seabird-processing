@@ -1,4 +1,4 @@
-"""This module provides an abstraction of Seabird SBE software exection.
+"""This module provides an abstraction of Seabird SBE software execution.
 
 Each command allows passing a text blob, and the module will handle storing a
 temporary file before spawning a sub process to process the file. This is an
@@ -12,8 +12,8 @@ Last updated: September 2016
 Copyright (c) 2016 Hakai Institute and Contributors All Rights Reserved.
 """
 
-from seabirdSBE import configs
-from seabirdSBE.commands import (
+from seabird_sbe import configs
+from seabird_sbe.commands import (
     sbe_align_ctd,
     sbe_bin_avg,
     sbe_cell_thermal_mass,
@@ -26,7 +26,7 @@ from seabirdSBE.commands import (
     sbe_section,
     sbe_wild_edit,
 )
-from seabirdSBE.pipeline import Pipeline
+from seabird_sbe.pipeline import Pipeline
 
 __all__ = [
     "configs",

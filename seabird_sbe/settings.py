@@ -1,7 +1,7 @@
 """
-Settings for the seabirdSBE package.
+Settings for the seabird-sbe package.
 
-This module contains the settings for the seabirdSBE package. These settings
+This module contains the settings for the seabird-sbe package. These settings
 are loaded from the .env file in the root of the package. The settings are
 loaded using the pydantic_settings package, which allows for the settings to
 be validated and loaded as an object.

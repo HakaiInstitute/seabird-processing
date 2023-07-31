@@ -7,7 +7,7 @@ write the data to disk between each command.
 """
 from typing import Iterable
 
-from seabirdSBE.configs import _SBEConfig
+from seabird_sbe.configs import (_SBEConfig)
 
 
 class Pipeline(object):

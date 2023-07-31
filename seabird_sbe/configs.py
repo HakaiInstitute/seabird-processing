@@ -12,10 +12,10 @@ import tempfile
 from pathlib import Path
 from typing import Union
 
-from pydantic import BaseModel, FilePath, DirectoryPath
+from pydantic import BaseModel, FilePath
 
-from seabirdSBE.sbe_exec import _sbe_exec
-from seabirdSBE.settings import load_settings
+from seabird_sbe.sbe_exec import _sbe_exec
+from seabird_sbe.settings import load_settings
 
 
 class _SBEConfig(BaseModel):
