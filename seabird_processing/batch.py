@@ -59,7 +59,7 @@ class Batch(object):
         Returns:
             str: The processed data
         """
-        with NamedTemporaryFile("w", suffix="txt") as config_file:
+        with NamedTemporaryFile("w", suffix=".txt") as config_file:
             config_file.write(self.get_batch_config_str(input_file_pattern))
             config_file.flush()
             subprocess.run(
