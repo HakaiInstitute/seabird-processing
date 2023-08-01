@@ -1,14 +1,5 @@
-from pathlib import Path
-
 from seabird_processing.configs import AlignCTDConfig
-
-
-def make_empty(path: Path) -> Path:
-    """Create an empty file at the given path."""
-    assert not path.is_file(), "File already exists"
-    with open(path, "w") as f:
-        f.write("")
-    return path
+from tests.utils import make_empty
 
 
 def test_align_ctd_batch_string(tmp_path):
