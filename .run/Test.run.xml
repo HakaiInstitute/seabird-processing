@@ -1,0 +1,23 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Test" type="tests" factoryName="Autodetect">
+    <module name="seabird-processing" />
+    <option name="INTERPRETER_OPTIONS" value="" />
+    <option name="PARENT_ENVS" value="true" />
+    <option name="SDK_HOME" value="$USER_HOME$/.cache/pypoetry/virtualenvs/seabird-sbe-ywvXuHbp-py3.10/bin/python" />
+    <option name="SDK_NAME" value="Poetry (seabird-processing)" />
+    <option name="WORKING_DIRECTORY" value="" />
+    <option name="IS_MODULE_SDK" value="false" />
+    <option name="ADD_CONTENT_ROOTS" value="true" />
+    <option name="ADD_SOURCE_ROOTS" value="true" />
+    <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+    <EXTENSION ID="software.aws.toolkits.jetbrains.core.execution.PythonAwsConnectionExtension">
+      <option name="credential" />
+      <option name="region" />
+      <option name="useCurrentConnection" value="false" />
+    </EXTENSION>
+    <option name="_new_additionalArguments" value="&quot;&quot;" />
+    <option name="_new_target" value="&quot;$PROJECT_DIR$&quot;" />
+    <option name="_new_targetType" value="&quot;PATH&quot;" />
+    <method v="2" />
+  </configuration>
+</component>
