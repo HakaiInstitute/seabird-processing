@@ -8,7 +8,7 @@ execute SBE modules on data.
 import subprocess
 from pathlib import Path
 
-from seabird_sbe.logger import logger
+from seabird_processing.logger import logger
 
 
 def _sbe_exec(

@@ -14,8 +14,8 @@ from typing import Union
 
 from pydantic import BaseModel, FilePath
 
-from seabird_sbe.sbe_exec import _sbe_exec
-from seabird_sbe.settings import load_settings
+from seabird_processing.sbe_exec import _sbe_exec
+from seabird_processing.settings import load_settings
 
 
 class _SBEConfig(BaseModel):
