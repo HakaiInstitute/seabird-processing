@@ -1,8 +1,11 @@
 [tool.poetry]
 name = "seabird-sbe"
 version = "0.0.0"
-description = "Python interface for calling Seabird SBE comands"
-authors = ["Taylor Denouden <taylordenouden@gmail.com>"]
+description = "Python interface for calling Seabird CTD processing commands"
+authors = [
+    "Taylor Denouden <taylor.denouden@hakai.org>",
+    "Jessy Barrett <jessy.barrett@hakai.org"
+]
 license = "MIT"
 readme = "README.md"
 
