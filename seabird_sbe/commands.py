@@ -11,7 +11,7 @@ files are not stored on the local file system.
 from pathlib import Path
 from typing import Union
 
-from seabird_sbe.configs import (AlignCTDConfig, BinAvgConfig, CellTMConfig, \
+from seabird_processing.configs import (AlignCTDConfig, BinAvgConfig, CellTMConfig, \
     DatCnvConfig, DeriveConfig, DeriveTEOS10Config, FilterConfig, LoopEditConfig, \
     SeaPlotConfig, SectionConfig, WildEditConfig)
 
