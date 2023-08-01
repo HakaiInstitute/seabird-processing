@@ -42,7 +42,7 @@ class which allows you to chain together multiple processing modules.
 ### Command line functions
 
 ```python
-from seabirdSBE import sbe_dat_cnv, sbe_filter
+from seabird_sbe import sbe_dat_cnv, sbe_filter
 
 xmlcon = './xmlcon/19-7467.xmlcon'
 
@@ -66,7 +66,7 @@ filtered = sbe_filter(cnvfile, xmlcon, './psa/AlignCTD.psa')
 ### Pipeline processing
 
 ```python
-from seabirdSBE import Pipeline, configs
+from seabird_sbe import Pipeline, configs
 
 xmlcon = './path/to/xmlcon/12-3456.xmlcon'
 
