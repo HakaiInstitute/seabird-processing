@@ -20,6 +20,7 @@ run these modules since they simply provide an abstraction of the command line t
 provided by Seabird.
 
 ### Install with pip
+
 To install this tool in your current python environment do:
 
 ```pip install seabirdSBE```
@@ -46,51 +47,47 @@ from seabird_processing import sbe_dat_cnv, sbe_filter
 
 xmlcon = './xmlcon/19-7467.xmlcon'
 
-# Execute a SBE method on some file data
-with open('./seabird_data_file.hex', 'r') as hexfile:
-    hexdata = hexfile.read()
-
-cnvfile = sbe_dat_cnv(hexdata, xmlcon, './psa/DatCnv.psa')
-print(cnvfile)
-
-# * Sea-Bird SBE19plus  Data File:
-# * FileName = C:\Users\Jimbo\Desktop\seabird_data_file.hex
-# * Software version 2.4.1
-# ...
-
-# Continue executing SBE methods on the same file data
-filtered = sbe_filter(cnvfile, xmlcon, './psa/AlignCTD.psa')
+cnvfile = sbe_dat_cnv('./seabird_data_file.hex', './output/dir', xmlcon, './psa/DatCnv.psa')
+filtered = sbe_filter(cnvfile, './output/dir', xmlcon, './psa/AlignCTD.psa')
 # ...
 ```
 
 ### Pipeline processing
 
 ```python
-from seabird_processing import Pipeline, configs
+from seabird_processing import Batch, configs
 
 xmlcon = './path/to/xmlcon/12-3456.xmlcon'
 
 # Create a pipeline with some config files
-pipeline = Pipeline([    
-    configs.DatCnvConfig(xmlcon, './path/to/DatCnv.psa'),
-    configs.FilterConfig(xmlcon, './path/to/Filter.psa'),
-    configs.AlignCTDConfig(xmlcon, './path/to/AlignCTD.psa'),
-    configs.CellTMConfig(xmlcon, './path/to/CellTM.psa'),
-    configs.LoopEditConfig(xmlcon, './path/to/LoopEdit.psa'),
-    configs.DeriveConfig(xmlcon, './path/to/Derive.psa'),
-    configs.DeriveTEOS10Config(xmlcon, './path/to/DeriveTEOS_10.psa'),
-    configs.BinAvgConfig(xmlcon, './path/to/BinAvg.psa'),
+pipeline = Batch([
+    configs.DatCnvConfig(
+        output_dir="./datcnv", output_file_suffix="_datcnv",
+        xmlcon=xmlcon, psa='./path/to/DatCnv.psa'),
+    configs.FilterConfig(
+        output_dir="./filter", output_file_suffix="_filter",
+        xmlcon=xmlcon, psa='./path/to/Filter.psa'),
+    configs.AlignCTDConfig(
+        output_dir="./alignctd", output_file_suffix="_alignctd",
+        xmlcon=xmlcon, psa='./path/to/AlignCTD.psa'),
+    configs.CellTMConfig(
+        output_dir="./celltm", output_file_suffix="_celltm",
+        xmlcon=xmlcon, psa='./path/to/CellTM.psa'),
+    configs.LoopEditConfig(
+        output_dir="./loopedit", output_file_suffix="_loopedit",
+        xmlcon=xmlcon, psa='./path/to/LoopEdit.psa'),
+    configs.DeriveConfig(
+        output_dir="./derive", output_file_suffix="_derive",
+        xmlcon=xmlcon, psa='./path/to/Derive.psa'),
+    configs.DeriveTEOS10Config(
+        output_dir="./deriveteos10", output_file_suffix="_deriveteos10",
+        xmlcon=xmlcon, psa='./path/to/DeriveTEOS_10.psa'),
+    configs.BinAvgConfig(
+        output_dir="./binavg", output_file_suffix="_binavg",
+        xmlcon=xmlcon, psa='./path/to/BinAvg.psa'),
 ])
 
-# Execute the entire pipeline on a file
-with open('./seabird_data_file.hex', 'r') as hexfile:
-    hexdata = hexfile.read()
-
-processed_data = pipeline(hexdata)
-
-# Write the data to disk, upload to a database, etc.
-with open('./processed_data.cnv', 'w') as f:
-    f.write(processed_data)
+pipeline("./*.hex")
 ```
 
 ### Copyright and Licensing Information
