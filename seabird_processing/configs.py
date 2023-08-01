@@ -41,9 +41,11 @@ class _SBEConfig(BaseModel):
             str: The path to the output file
         """
         input_file_path = Path(input_file)
-        output_file_path = Path(self.output_dir) / input_file_path.with_suffix(
-            f"{self.output_file_suffix}{self.output_file_ext}"
+        output_file_path = (
+            Path(self.output_dir)
+            / f"{input_file_path.stem}{self.output_file_suffix}{self.output_file_ext}"
         )
+
         return str(output_file_path)
 
     def get_exec_str(
