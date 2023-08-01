@@ -43,12 +43,13 @@ class which allows you to chain together multiple processing modules.
 ### Command line functions
 
 ```python
-from seabird_processing import sbe_dat_cnv, sbe_filter
+from seabird_processing import dat_cnv, filter_
 
 xmlcon = './xmlcon/19-7467.xmlcon'
 
-cnvfile = sbe_dat_cnv('./seabird_data_file.hex', './output/dir', xmlcon, './psa/DatCnv.psa')
-filtered = sbe_filter(cnvfile, './output/dir', xmlcon, './psa/AlignCTD.psa')
+cnvfile = dat_cnv('./seabird_data_file.hex', './output/dir', xmlcon, './psa/DatCnv.psa')
+# "filter" is a reserved keyword, so this function is called "filter_"
+filtered = filter_(cnvfile, './output/dir', xmlcon, './psa/AlignCTD.psa')
 # ...
 ```
 

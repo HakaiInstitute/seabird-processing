@@ -26,7 +26,7 @@ from seabird_processing.configs import (
 )
 
 
-def sbe_align_ctd(
+def align_ctd(
     input_file: Union[Path, str],
     output_dir: Union[Path, str],
     xmlcon: Union[Path, str] = None,
@@ -48,7 +48,7 @@ def sbe_align_ctd(
     )
 
 
-def sbe_bin_avg(
+def bin_avg(
     input_file: Union[Path, str],
     output_dir: Union[Path, str],
     xmlcon: Union[Path, str] = None,
@@ -70,7 +70,7 @@ def sbe_bin_avg(
     )
 
 
-def sbe_cell_thermal_mass(
+def cell_thermal_mass(
     input_file: Union[Path, str],
     output_dir: Union[Path, str],
     xmlcon: Union[Path, str] = None,
@@ -92,7 +92,7 @@ def sbe_cell_thermal_mass(
     )
 
 
-def sbe_dat_cnv(
+def dat_cnv(
     input_file: Union[Path, str],
     output_dir: Union[Path, str],
     xmlcon: Union[Path, str] = None,
@@ -114,7 +114,7 @@ def sbe_dat_cnv(
     )
 
 
-def sbe_derive(
+def derive(
     input_file: Union[Path, str],
     output_dir: Union[Path, str],
     xmlcon: Union[Path, str] = None,
@@ -136,7 +136,7 @@ def sbe_derive(
     )
 
 
-def sbe_derive_teos10(
+def derive_teos10(
     input_file: Union[Path, str],
     output_dir: Union[Path, str],
     xmlcon: Union[Path, str] = None,
@@ -158,7 +158,7 @@ def sbe_derive_teos10(
     )
 
 
-def sbe_filter(
+def filter_(
     input_file: Union[Path, str],
     output_dir: Union[Path, str],
     xmlcon: Union[Path, str] = None,
@@ -180,7 +180,7 @@ def sbe_filter(
     )
 
 
-def sbe_loop_edit(
+def loop_edit(
     input_file: Union[Path, str],
     output_dir: Union[Path, str],
     xmlcon: Union[Path, str] = None,
@@ -202,7 +202,7 @@ def sbe_loop_edit(
     )
 
 
-def sbe_sea_plot(
+def sea_plot(
     input_file: Union[Path, str],
     output_dir: Union[Path, str],
     xmlcon: Union[Path, str] = None,
@@ -224,7 +224,7 @@ def sbe_sea_plot(
     )
 
 
-def sbe_section(
+def section(
     input_file: Union[Path, str],
     output_dir: Union[Path, str],
     xmlcon: Union[Path, str] = None,
@@ -246,7 +246,7 @@ def sbe_section(
     )
 
 
-def sbe_wild_edit(
+def wild_edit(
     input_file: Union[Path, str],
     output_dir: Union[Path, str],
     xmlcon: Union[Path, str] = None,
