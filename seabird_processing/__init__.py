@@ -26,7 +26,7 @@ from seabird_processing.commands import (
     sbe_section,
     sbe_wild_edit,
 )
-from seabird_processing.pipeline import Pipeline
+from seabird_processing.batch import Batch
 
 __all__ = [
     "configs",
@@ -41,6 +41,6 @@ __all__ = [
     "sbe_sea_plot",
     "sbe_section",
     "sbe_wild_edit",
-    "Pipeline",
+    "Batch",
 ]
 __version__ = "0.0.0"

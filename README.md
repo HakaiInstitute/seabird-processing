@@ -71,7 +71,7 @@ from seabird_processing import Pipeline, configs
 xmlcon = './path/to/xmlcon/12-3456.xmlcon'
 
 # Create a pipeline with some config files
-pipeline = Pipeline([    
+pipeline = Pipeline([
     configs.DatCnvConfig(xmlcon, './path/to/DatCnv.psa'),
     configs.FilterConfig(xmlcon, './path/to/Filter.psa'),
     configs.AlignCTDConfig(xmlcon, './path/to/AlignCTD.psa'),
