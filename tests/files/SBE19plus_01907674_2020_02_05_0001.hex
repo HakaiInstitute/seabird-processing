@@ -12,354 +12,354 @@
 * </ApplicationData>
 * <InstrumentState>
 * <HardwareData DeviceType='SBE19plus' SerialNumber='01907674'>
-* 
+*
 *    <Manufacturer>Sea-Bird Electronics, Inc.</Manufacturer>
-* 
+*
 *    <FirmwareVersion>2.5.2</FirmwareVersion>
-* 
+*
 *    <FirmwareDate>12 Mar 2013 11:50</FirmwareDate>
-* 
+*
 *    <CommandSetVersion>1.3</CommandSetVersion>
-* 
+*
 *    <PCBAssembly PCBSerialNum='101177' AssemblyNum='41054h'/>
-* 
+*
 *    <PCBAssembly PCBSerialNum='101239' AssemblyNum='41580c'/>
-* 
+*
 *    <PCBAssembly PCBSerialNum='101243' AssemblyNum='41606'/>
-* 
+*
 *    <PCBAssembly PCBSerialNum='101241' AssemblyNum='41932B'/>
-* 
+*
 *    <MfgDate>12222016</MfgDate>
-* 
+*
 *    <InternalSensors>
-* 
+*
 *       <Sensor id='Main Temperature'>
-* 
+*
 *          <type>temperature0</type>
-* 
+*
 *          <SerialNumber>01907674</SerialNumber>
-* 
+*
 *       </Sensor>
-* 
+*
 *       <Sensor id='Main Conductivity'>
-* 
+*
 *          <type>conductivity-0</type>
-* 
+*
 *          <SerialNumber>01907674</SerialNumber>
-* 
+*
 *       </Sensor>
-* 
+*
 *       <Sensor id='Main Pressure'>
-* 
+*
 *          <type>strain-0</type>
-* 
+*
 *          <SerialNumber>4415752</SerialNumber>
-* 
+*
 *       </Sensor>
-* 
+*
 *    </InternalSensors>
-* 
+*
 *    <ExternalSensors>
-* 
+*
 *       <Sensor id='volt 0'>
-* 
+*
 *          <type>not assigned</type>
-* 
+*
 *          <SerialNumber>not assigned</SerialNumber>
-* 
+*
 *       </Sensor>
-* 
+*
 *       <Sensor id='volt 1'>
-* 
+*
 *          <type>not assigned</type>
-* 
+*
 *          <SerialNumber>not assigned</SerialNumber>
-* 
+*
 *       </Sensor>
-* 
+*
 *       <Sensor id='volt 2'>
-* 
+*
 *          <type>not assigned</type>
-* 
+*
 *          <SerialNumber>not assigned</SerialNumber>
-* 
+*
 *       </Sensor>
-* 
+*
 *       <Sensor id='volt 3'>
-* 
+*
 *          <type>not assigned</type>
-* 
+*
 *          <SerialNumber>not assigned</SerialNumber>
-* 
+*
 *       </Sensor>
-* 
+*
 *       <Sensor id='volt 4'>
-* 
+*
 *          <type>not assigned</type>
-* 
+*
 *          <SerialNumber>not assigned</SerialNumber>
-* 
+*
 *       </Sensor>
-* 
+*
 *       <Sensor id='volt 5'>
-* 
+*
 *          <type>not assigned</type>
-* 
+*
 *          <SerialNumber>not assigned</SerialNumber>
-* 
+*
 *       </Sensor>
-* 
+*
 *       <Sensor id='serial'>
-* 
+*
 *          <type>WetLabs TransX</type>
-* 
+*
 *          <SerialNumber>CSTR-1737PR</SerialNumber>
-* 
+*
 *       </Sensor>
-* 
+*
 *    </ExternalSensors>
-* 
+*
 * </HardwareData>
 * <StatusData DeviceType='SBE19plus' SerialNumber='01907674'>
-* 
+*
 *    <DateTime>2020-02-05T14:50:49</DateTime>
-* 
+*
 *    <LoggingState>not logging</LoggingState>
-* 
+*
 *    <EventSummary numEvents='0'/>
-* 
+*
 *    <Power>
-* 
+*
 *       <vMain>13.3</vMain>
-* 
+*
 *       <vLith>8.1</vLith>
-* 
+*
 *       <iMain>60.9</iMain>
-* 
+*
 *       <iPump>64.8</iPump>
-* 
+*
 *       <iExt01>30.6</iExt01>
-* 
+*
 *       <iExt2345>24.3</iExt2345>
-* 
+*
 *       <iSerial>28.7</iSerial>
-* 
+*
 *    </Power>
-* 
+*
 *    <MemorySummary>
-* 
+*
 *       <Bytes>392602</Bytes>
-* 
+*
 *       <Samples>13538</Samples>
-* 
+*
 *       <SamplesFree>2255363</SamplesFree>
-* 
+*
 *       <SampleLength>29</SampleLength>
-* 
+*
 *       <Profiles>7</Profiles>
-* 
+*
 *    </MemorySummary>
-* 
+*
 * </StatusData>
 * <ConfigurationData DeviceType='SBE19plus' SerialNumber='01907674'>
-* 
+*
 *    <ProfileMode>
-* 
+*
 *       <ScansToAverage>1</ScansToAverage>
-* 
+*
 *       <MinimumCondFreq>3000</MinimumCondFreq>
-* 
+*
 *       <PumpDelay>60</PumpDelay>
-* 
+*
 *       <AutoRun>no</AutoRun>
-* 
+*
 *       <IgnoreSwitch>no</IgnoreSwitch>
-* 
+*
 *    </ProfileMode>
-* 
+*
 *    <Battery>
-* 
+*
 *       <Type>alkaline</Type>
-* 
+*
 *       <CutOff>7.5</CutOff>
-* 
+*
 *    </Battery>
-* 
+*
 *    <DataChannels>
-* 
+*
 *       <ExtVolt0>yes</ExtVolt0>
-* 
+*
 *       <ExtVolt1>yes</ExtVolt1>
-* 
+*
 *       <ExtVolt2>yes</ExtVolt2>
-* 
+*
 *       <ExtVolt3>yes</ExtVolt3>
-* 
+*
 *       <ExtVolt4>yes</ExtVolt4>
-* 
+*
 *       <ExtVolt5>yes</ExtVolt5>
-* 
+*
 *       <SBE38>no</SBE38>
-* 
+*
 *       <WETLABS>yes</WETLABS>
-* 
+*
 *       <OPTODE>no</OPTODE>
-* 
+*
 *       <SBE63>no</SBE63>
-* 
+*
 *       <GTD>no</GTD>
-* 
+*
 *    </DataChannels>
-* 
+*
 *    <EchoCharacters>yes</EchoCharacters>
-* 
+*
 *    <OutputExecutedTag>yes</OutputExecutedTag>
-* 
+*
 *    <OutputFormat>raw decimal</OutputFormat>
-* 
+*
 * </ConfigurationData>
 * <CalibrationCoefficients DeviceType='SBE19plus' SerialNumber='01907674'>
-* 
+*
 *    <Calibration format='TEMP1' id='Main Temperature'>
-* 
+*
 *       <SerialNum>01907674</SerialNum>
-* 
+*
 *       <CalDate>12-May-18</CalDate>
-* 
+*
 *       <TA0>1.252720e-03</TA0>
-* 
+*
 *       <TA1>2.738936e-04</TA1>
-* 
+*
 *       <TA2>-8.950324e-07</TA2>
-* 
+*
 *       <TA3>1.722993e-07</TA3>
-* 
+*
 *       <TOFFSET>0.000000e+00</TOFFSET>
-* 
+*
 *    </Calibration>
-* 
+*
 *    <Calibration format='WBCOND0' id='Main Conductivity'>
-* 
+*
 *       <SerialNum>01907674</SerialNum>
-* 
+*
 *       <CalDate>12-May-18</CalDate>
-* 
+*
 *       <G>-9.749632e-01</G>
-* 
+*
 *       <H>1.327690e-01</H>
-* 
+*
 *       <I>-1.753914e-04</I>
-* 
+*
 *       <J>3.048534e-05</J>
-* 
+*
 *       <CPCOR>-9.570000e-08</CPCOR>
-* 
+*
 *       <CTCOR>3.250000e-06</CTCOR>
-* 
+*
 *       <CSLOPE>1.000000e+00</CSLOPE>
-* 
+*
 *    </Calibration>
-* 
+*
 *    <Calibration format='STRAIN0' id='Main Pressure'>
-* 
+*
 *       <SerialNum>4415752</SerialNum>
-* 
+*
 *       <CalDate>08-May-18</CalDate>
-* 
+*
 *       <PA0>1.857190e+00</PA0>
-* 
+*
 *       <PA1>3.161365e-03</PA1>
-* 
+*
 *       <PA2>9.942939e-11</PA2>
-* 
+*
 *       <PTCA0>5.233498e+05</PTCA0>
-* 
+*
 *       <PTCA1>1.337694e+01</PTCA1>
-* 
+*
 *       <PTCA2>5.459600e-01</PTCA2>
-* 
+*
 *       <PTCB0>2.492863e+01</PTCB0>
-* 
+*
 *       <PTCB1>3.250000e-04</PTCB1>
-* 
+*
 *       <PTCB2>0.000000e+00</PTCB2>
-* 
+*
 *       <PTEMPA0>1.699671e+02</PTEMPA0>
-* 
+*
 *       <PTEMPA1>-4.999951e+01</PTEMPA1>
-* 
+*
 *       <PTEMPA2>-2.320241e+00</PTEMPA2>
-* 
+*
 *       <POFFSET>0.000000e+00</POFFSET>
-* 
+*
 *       <PRANGE>8.700000e+02</PRANGE>
-* 
+*
 *    </Calibration>
-* 
+*
 *    <Calibration format='VOLT0' id='Volt 0'>
-* 
+*
 *       <OFFSET>-4.646421e-02</OFFSET>
-* 
+*
 *       <SLOPE>1.251479e+00</SLOPE>
-* 
+*
 *    </Calibration>
-* 
+*
 *    <Calibration format='VOLT0' id='Volt 1'>
-* 
+*
 *       <OFFSET>-4.659158e-02</OFFSET>
-* 
+*
 *       <SLOPE>1.251417e+00</SLOPE>
-* 
+*
 *    </Calibration>
-* 
+*
 *    <Calibration format='VOLT0' id='Volt 2'>
-* 
+*
 *       <OFFSET>-4.720316e-02</OFFSET>
-* 
+*
 *       <SLOPE>1.251404e+00</SLOPE>
-* 
+*
 *    </Calibration>
-* 
+*
 *    <Calibration format='VOLT0' id='Volt 3'>
-* 
+*
 *       <OFFSET>-4.635895e-02</OFFSET>
-* 
+*
 *       <SLOPE>1.250783e+00</SLOPE>
-* 
+*
 *    </Calibration>
-* 
+*
 *    <Calibration format='VOLT0' id='Volt 4'>
-* 
+*
 *       <OFFSET>-4.578105e-02</OFFSET>
-* 
+*
 *       <SLOPE>1.252584e+00</SLOPE>
-* 
+*
 *    </Calibration>
-* 
+*
 *    <Calibration format='VOLT0' id='Volt 5'>
-* 
+*
 *       <OFFSET>-4.584527e-02</OFFSET>
-* 
+*
 *       <SLOPE>1.251505e+00</SLOPE>
-* 
+*
 *    </Calibration>
-* 
+*
 *    <Calibration format='FREQ0' id='external frequency channel'>
-* 
+*
 *       <EXTFREQSF>9.999908e-01</EXTFREQSF>
-* 
+*
 *    </Calibration>
-* 
+*
 * </CalibrationCoefficients>
 * <EventCounters DeviceType='SBE19plus' SerialNumber='01907674'>
-* 
+*
 *    <EventSummary numEvents='0'/>
-* 
+*
 * </EventCounters></InstrumentState>
 * <Headers>
-* 
+*
 * cast   1 05 Feb 2020 09:31:41 samples 1 to 1805, avg = 1, stop = mag switch
-* 
+*
 * </Headers><UserHeaderInsert>
 * <![CDATA[
 ** Workarea: QUADRA
