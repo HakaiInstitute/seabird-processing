@@ -23,7 +23,7 @@ provided by Seabird.
 
 To install this tool in your current python environment do:
 
-```pip install seabirdSBE```
+```pip install seabird-processing```
 
 Configure the tool with the location of your Seabird Processing Suite installation by
 setting the `SEABIRD_SBE_PATH` environment variable. For example, if you installed the
@@ -61,8 +61,9 @@ from seabird_processing import Batch, configs
 xmlcon = './path/to/xmlcon/12-3456.xmlcon'
 
 # Create a pipeline with some config files
-pipeline = Batch([
+batch = Batch([
     configs.DatCnvConfig(
+        # `output_file_suffix` is optional
         output_dir="./datcnv", output_file_suffix="_datcnv",
         xmlcon=xmlcon, psa='./path/to/DatCnv.psa'),
     configs.FilterConfig(
@@ -88,7 +89,14 @@ pipeline = Batch([
         xmlcon=xmlcon, psa='./path/to/BinAvg.psa'),
 ])
 
-pipeline("./*.hex")
+batch.run("./*.hex")
+
+# You may also run an individual Config object
+converter = configs.DatCnvConfig(
+    output_dir="./datcnv", output_file_suffix="_datcnv",
+    xmlcon=xmlcon, psa='./path/to/DatCnv.psa'
+)
+converter.run("./some/file.hex")
 ```
 
 ### Copyright and Licensing Information
