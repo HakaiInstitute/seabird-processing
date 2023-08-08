@@ -43,6 +43,7 @@ class _SBEConfig(BaseModel, abc.ABC):
 
     @property
     def _exe_path(self) -> str:
+        """Return the full path to the executable."""
         settings = load_settings()
         return f"{settings.sbe_processing_path}/{self._exe_name}"
 
@@ -67,7 +68,7 @@ class _SBEConfig(BaseModel, abc.ABC):
         input_file: Union[Path, str],
         batch_mode: bool = False,
     ) -> str:
-        """Get the command to as a string.
+        """Get the SBE processing command string.
 
         Args:
             input_file: The path to the input file
@@ -89,7 +90,7 @@ class _SBEConfig(BaseModel, abc.ABC):
         return " ".join(exec_str)
 
     def run(self, input_file: Union[Path, str]) -> str:
-        """Run the command on the data.
+        """Run the command on data in input_file.
 
         Args:
             input_file: The path to the file to run the command on

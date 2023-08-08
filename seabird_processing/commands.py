@@ -43,9 +43,8 @@ def align_ctd(
     Returns:
         str: The processed data
     """
-    return AlignCTDConfig(output_dir=output_dir, xmlcon=xmlcon, psa=psa, **kwargs).run(
-        input_file
-    )
+    config = AlignCTDConfig(output_dir=output_dir, xmlcon=xmlcon, psa=psa, **kwargs)
+    return config.run(input_file)
 
 
 def bin_avg(
@@ -65,9 +64,8 @@ def bin_avg(
     Returns:
         str: The processed data
     """
-    return BinAvgConfig(output_dir=output_dir, xmlcon=xmlcon, psa=psa, **kwargs).run(
-        input_file
-    )
+    config = BinAvgConfig(output_dir=output_dir, xmlcon=xmlcon, psa=psa, **kwargs)
+    return config.run(input_file)
 
 
 def cell_thermal_mass(
@@ -87,9 +85,8 @@ def cell_thermal_mass(
     Returns:
         str: The processed data
     """
-    return CellTMConfig(output_dir=output_dir, xmlcon=xmlcon, psa=psa, **kwargs).run(
-        input_file
-    )
+    config = CellTMConfig(output_dir=output_dir, xmlcon=xmlcon, psa=psa, **kwargs)
+    return config.run(input_file)
 
 
 def dat_cnv(
@@ -109,9 +106,8 @@ def dat_cnv(
     Returns:
         str: The processed data
     """
-    return DatCnvConfig(output_dir=output_dir, xmlcon=xmlcon, psa=psa, **kwargs).run(
-        input_file
-    )
+    config = DatCnvConfig(output_dir=output_dir, xmlcon=xmlcon, psa=psa, **kwargs)
+    return config.run(input_file)
 
 
 def derive(
@@ -131,9 +127,8 @@ def derive(
     Returns:
         str: The processed data
     """
-    return DeriveConfig(output_dir=output_dir, xmlcon=xmlcon, psa=psa, **kwargs).run(
-        input_file
-    )
+    config = DeriveConfig(output_dir=output_dir, xmlcon=xmlcon, psa=psa, **kwargs)
+    return config.run(input_file)
 
 
 def derive_teos10(
@@ -153,9 +148,8 @@ def derive_teos10(
     Returns:
         str: The processed data
     """
-    return DeriveTEOS10Config(output_dir=output_dir, xmlcon=xmlcon, psa=psa).run(
-        input_file
-    )
+    config = DeriveTEOS10Config(output_dir=output_dir, xmlcon=xmlcon, psa=psa)
+    return config.run(input_file)
 
 
 def filter_(
@@ -175,9 +169,8 @@ def filter_(
     Returns:
         str: The processed data
     """
-    return FilterConfig(output_dir=output_dir, xmlcon=xmlcon, psa=psa, **kwargs).run(
-        input_file
-    )
+    config = FilterConfig(output_dir=output_dir, xmlcon=xmlcon, psa=psa, **kwargs)
+    return config.run(input_file)
 
 
 def loop_edit(
@@ -197,9 +190,8 @@ def loop_edit(
     Returns:
         str: The processed data
     """
-    return LoopEditConfig(output_dir=output_dir, xmlcon=xmlcon, psa=psa, **kwargs).run(
-        input_file
-    )
+    config = LoopEditConfig(output_dir=output_dir, xmlcon=xmlcon, psa=psa, **kwargs)
+    return config.run(input_file)
 
 
 def sea_plot(
@@ -219,9 +211,8 @@ def sea_plot(
     Returns:
         str: The processed data
     """
-    return SeaPlotConfig(output_dir=output_dir, xmlcon=xmlcon, psa=psa, **kwargs).run(
-        input_file
-    )
+    config = SeaPlotConfig(output_dir=output_dir, xmlcon=xmlcon, psa=psa, **kwargs)
+    return config.run(input_file)
 
 
 def section(
@@ -241,9 +232,8 @@ def section(
     Returns:
         str: The processed data
     """
-    return SectionConfig(output_dir=output_dir, xmlcon=xmlcon, psa=psa, **kwargs).run(
-        input_file
-    )
+    config = SectionConfig(output_dir=output_dir, xmlcon=xmlcon, psa=psa, **kwargs)
+    return config.run(input_file)
 
 
 def wild_edit(
@@ -263,6 +253,5 @@ def wild_edit(
     Returns:
         str: The processed data
     """
-    return WildEditConfig(output_dir=output_dir, xmlcon=xmlcon, psa=psa, **kwargs).run(
-        input_file
-    )
+    config = WildEditConfig(output_dir=output_dir, xmlcon=xmlcon, psa=psa, **kwargs)
+    return config.run(input_file)
