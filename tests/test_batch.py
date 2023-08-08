@@ -64,6 +64,7 @@ def test_batch(tmp_path):
                 output_dir=f"{output_dir}/1",
                 xmlcon=xmlcon_path,
                 psa="./tests/files/psa/DatCnv-7674-20181210.psa",
+                # output_file_suffix="_datcnv",
             ),
             configs.FilterConfig(
                 output_dir=f"{output_dir}/2",
@@ -111,4 +112,7 @@ def test_batch(tmp_path):
     )
 
     batch.run("./tests/files/*.hex")
-    assert Path(f"{output_dir}/8/SBE19plus_01907674_2020_02_05_0001.cnv").is_file()
+    for i in range(1, 9):
+        assert Path(
+            f"{output_dir}/{i}/SBE19plus_01907674_2020_02_05_0001.cnv"
+        ).is_file()

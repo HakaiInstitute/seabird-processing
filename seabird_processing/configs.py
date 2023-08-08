@@ -95,13 +95,14 @@ class _SBEConfig(BaseModel, abc.ABC):
             ps = subprocess.run(
                 exec_str,
                 timeout=50,
+                check=True,
+                shell=True,
                 stdout=subprocess.PIPE,
                 stderr=subprocess.PIPE,
             )
             if ps.stdout:
                 logger.debug(ps.stdout)
-        except Exception as e:
-            # TODO: Fix this to be more specific
+        except subprocess.CalledProcessError as e:
             if e.stderr:
                 logger.error(e.stderr)
             raise e

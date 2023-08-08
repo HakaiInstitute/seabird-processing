@@ -14,7 +14,7 @@
       <option name="region" />
       <option name="useCurrentConnection" value="false" />
     </EXTENSION>
-    <option name="_new_additionalArguments" value="&quot;&quot;" />
+    <option name="_new_additionalArguments" value="&quot;-vv&quot;" />
     <option name="_new_target" value="&quot;$PROJECT_DIR$&quot;" />
     <option name="_new_targetType" value="&quot;PATH&quot;" />
     <method v="2" />

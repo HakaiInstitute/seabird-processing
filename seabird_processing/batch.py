@@ -11,6 +11,7 @@ from tempfile import TemporaryDirectory
 from typing import Iterable
 
 from seabird_processing.configs import _SBEConfig
+from seabird_processing.logger import logger
 
 
 class Batch(object):
@@ -60,4 +61,18 @@ class Batch(object):
         with TemporaryDirectory() as temp_dir:
             with open(Path(temp_dir) / "config.txt", "w") as config_file:
                 config_file.write(self.get_batch_config_str(input_file_pattern))
-            subprocess.run(["sbebatch", config_file.name], check=True)
+            try:
+                ps = subprocess.run(
+                    ["sbebatch", config_file.name],
+                    timeout=100,
+                    check=True,
+                    shell=True,
+                    stdout=subprocess.PIPE,
+                    stderr=subprocess.PIPE,
+                )
+                if ps.stdout:
+                    logger.debug(ps.stdout)
+            except subprocess.CalledProcessError as e:
+                if e.stderr:
+                    logger.error(e.stderr)
+                raise e
