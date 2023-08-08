@@ -30,7 +30,7 @@ class _SBEConfig(BaseModel):
     @property
     def _exe_path(self) -> str:
         settings = load_settings()
-        return f"{settings.seabird_sbe_path}/{self.exe_name}"
+        return f"{settings.sbe_processing_path}/{self.exe_name}"
 
     def output_file_path(self, input_file: Union[Path, str]) -> str:
         """Get the path to the output file.
