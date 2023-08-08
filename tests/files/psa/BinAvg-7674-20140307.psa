@@ -22,4 +22,7 @@
   <SurfaceBinMinVal value="0.000000" />
   <SurfaceBinMaxVal value="1.000000" />
   <SurfaceBinVal value="1.000000" />
+  <ScansToOmit value="0.000000" />
+  <MinScansPerBin value="1.000000" />
+  <MaxScansPerBin value="1000000.000000" />
 </Bin_Average>
