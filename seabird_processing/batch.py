@@ -7,7 +7,7 @@ write the data to disk between each command.
 """
 import subprocess
 from pathlib import Path
-from tempfile import NamedTemporaryFile
+from tempfile import TemporaryDirectory
 from typing import Iterable
 
 from seabird_processing.configs import _SBEConfig
@@ -42,16 +42,14 @@ class Batch(object):
             str: The batch configuration string
         """
         batch_config_str = [self.config_header_comment]
-        next_input_file = input_file_pattern
+        input_pattern = input_file_pattern
         for config in self.stages:
-            batch_config_str.append(
-                config.get_exec_str(next_input_file, batch_mode=True)
-            )
-            next_input_file = Path(config.output_file_path(next_input_file)).name
+            batch_config_str.append(config.get_exec_str(input_pattern, batch_mode=True))
+            input_pattern = Path(config.output_file_path(input_pattern))
 
         return "\n".join(batch_config_str)
 
-    def __call__(self, input_file_pattern: str):
+    def run(self, input_file_pattern: str):
         """Run the pipeline on the data.
 
         Args:
@@ -59,13 +57,7 @@ class Batch(object):
         Returns:
             str: The processed data
         """
-        with NamedTemporaryFile("w", suffix=".txt") as config_file:
-            config_file.write(self.get_batch_config_str(input_file_pattern))
-            config_file.flush()
-            subprocess.run(
-                [
-                    "sbebatch",
-                    config_file.name,
-                ],
-                check=True,
-            )
+        with TemporaryDirectory() as temp_dir:
+            with open(Path(temp_dir) / "config.txt", "w") as config_file:
+                config_file.write(self.get_batch_config_str(input_file_pattern))
+            subprocess.run(["sbebatch", config_file.name], check=True)
