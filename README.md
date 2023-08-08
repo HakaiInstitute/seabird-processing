@@ -1,4 +1,4 @@
-# Seabird-SBE
+# Seabird-Processing
 
 Python bindings for executing Seabird SBE processing tools.
 
