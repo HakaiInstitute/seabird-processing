@@ -50,6 +50,15 @@ class Batch(object):
 
         return "\n".join(batch_config_str)
 
+    @property
+    def timeout(self) -> int:
+        """Get the timeout for the batch command.
+
+        Returns:
+            int: The timeout for the batch command
+        """
+        return sum([stage.timeout for stage in self.stages])
+
     def run(self, input_file_pattern: str):
         """Run the pipeline on the data.
 
@@ -64,7 +73,7 @@ class Batch(object):
             try:
                 ps = subprocess.run(
                     ["sbebatch", config_file.name],
-                    timeout=100,
+                    timeout=self.timeout,
                     check=True,
                     shell=True,
                     stdout=subprocess.PIPE,

@@ -20,6 +20,8 @@ class _Settings(BaseSettings):
         r"C:\Program Files (x86)\Sea-Bird\SBEDataProcessing-Win32"
     )
 
+    sbe_command_timeout: int = 60 * 2  # 2 minutes
+
 
 @lru_cache()
 def load_settings() -> _Settings:

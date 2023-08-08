@@ -32,6 +32,16 @@ class _SBEConfig(BaseModel, abc.ABC):
     output_file_suffix: str = ""
 
     @property
+    def timeout(self) -> int:
+        """Get the timeout for the command.
+
+        Returns:
+            int: The timeout for the command
+        """
+        settings = load_settings()
+        return settings.sbe_command_timeout
+
+    @property
     def _exe_path(self) -> str:
         settings = load_settings()
         return f"{settings.sbe_processing_path}/{self._exe_name}"
@@ -94,7 +104,7 @@ class _SBEConfig(BaseModel, abc.ABC):
             exec_str = self.get_exec_str(input_file).split()
             ps = subprocess.run(
                 exec_str,
-                timeout=50,
+                timeout=self.timeout,
                 check=True,
                 shell=True,
                 stdout=subprocess.PIPE,
