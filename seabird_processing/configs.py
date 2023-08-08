@@ -7,6 +7,7 @@ improvement over the regular command line arguments of SBE because it allows
 for the separation of file I/O and data processing, which is important when
 files are not stored on the local file system.
 """
+import abc
 import subprocess
 from pathlib import Path
 from typing import Union
@@ -17,20 +18,23 @@ from seabird_processing.logger import logger
 from seabird_processing.settings import load_settings
 
 
-class _SBEConfig(BaseModel):
-    exe_name: str
-    batch_name: str
-    output_dir: DirectoryPath
+class _SBEConfig(BaseModel, abc.ABC):
+    # Internal parameters
+    _exe_name: str
+    _batch_name: str
+    _input_file_ext: str = ".cnv"
+    _output_file_ext: str = ".cnv"
+
+    # User defined parameters
     xmlcon: FilePath
     psa: FilePath
+    output_dir: DirectoryPath
     output_file_suffix: str = ""
-    input_file_ext: str = ".cnv"
-    output_file_ext: str = ".cnv"
 
     @property
     def _exe_path(self) -> str:
         settings = load_settings()
-        return f"{settings.sbe_processing_path}/{self.exe_name}"
+        return f"{settings.sbe_processing_path}/{self._exe_name}"
 
     def output_file_path(self, input_file: Union[Path, str]) -> str:
         """Get the path to the output file.
@@ -43,7 +47,7 @@ class _SBEConfig(BaseModel):
         input_file_path = Path(input_file)
         output_file_path = (
             Path(self.output_dir)
-            / f"{input_file_path.stem}{self.output_file_suffix}{self.output_file_ext}"
+            / f"{input_file_path.stem}{self.output_file_suffix}{self._output_file_ext}"
         )
 
         return str(output_file_path)
@@ -61,7 +65,7 @@ class _SBEConfig(BaseModel):
         Returns:k
             str: The command to execute
         """
-        cmd_path = self._exe_path if not batch_mode else self.batch_name
+        cmd_path = self._exe_path if not batch_mode else self._batch_name
 
         exec_str = [
             cmd_path,
@@ -106,56 +110,56 @@ class _SBEConfig(BaseModel):
 
 
 class AlignCTDConfig(_SBEConfig):
-    exe_name: str = "AlignCTDW.exe"
-    batch_name: str = "alignctd"
+    _exe_name: str = "AlignCTDW.exe"
+    _batch_name: str = "alignctd"
 
 
 class BinAvgConfig(_SBEConfig):
-    exe_name: str = "BinAvgW.exe"
-    batch_name: str = "binavg"
+    _exe_name: str = "BinAvgW.exe"
+    _batch_name: str = "binavg"
 
 
 class CellTMConfig(_SBEConfig):
-    exe_name: str = "CellTMW.exe"
-    batch_name: str = "celltm"
+    _exe_name: str = "CellTMW.exe"
+    _batch_name: str = "celltm"
 
 
 class DatCnvConfig(_SBEConfig):
-    exe_name: str = "DatCnvW.exe"
-    batch_name: str = "datcnv"
-    input_file_ext: str = ".hex"
+    _exe_name: str = "DatCnvW.exe"
+    _batch_name: str = "datcnv"
+    _input_file_ext: str = ".hex"
 
 
 class DeriveConfig(_SBEConfig):
-    exe_name: str = "DeriveW.exe"
-    batch_name: str = "derive"
+    _exe_name: str = "DeriveW.exe"
+    _batch_name: str = "derive"
 
 
 class DeriveTEOS10Config(_SBEConfig):
-    exe_name: str = "DeriveTEOS_10W.exe"
-    batch_name: str = "deriveteos10"
+    _exe_name: str = "DeriveTEOS_10W.exe"
+    _batch_name: str = "deriveteos10"
 
 
 class FilterConfig(_SBEConfig):
-    exe_name: str = "FilterW.exe"
-    batch_name: str = "filter"
+    _exe_name: str = "FilterW.exe"
+    _batch_name: str = "filter"
 
 
 class LoopEditConfig(_SBEConfig):
-    exe_name: str = "LoopEditW.exe"
-    batch_name: str = "loopedit"
+    _exe_name: str = "LoopEditW.exe"
+    _batch_name: str = "loopedit"
 
 
 class SeaPlotConfig(_SBEConfig):
-    exe_name: str = "SeaPlotW.exe"
-    batch_name: str = "seaplot"
+    _exe_name: str = "SeaPlotW.exe"
+    _batch_name: str = "seaplot"
 
 
 class SectionConfig(_SBEConfig):
-    exe_name: str = "SectionW.exe"
-    batch_name: str = "section"
+    _exe_name: str = "SectionW.exe"
+    _batch_name: str = "section"
 
 
 class WildEditConfig(_SBEConfig):
-    exe_name: str = "WildEditW.exe"
-    batch_name: str = "wildedit"
+    _exe_name: str = "WildEditW.exe"
+    _batch_name: str = "wildedit"
