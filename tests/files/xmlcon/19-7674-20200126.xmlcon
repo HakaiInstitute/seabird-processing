@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SBE_InstrumentConfiguration SB_ConfigCTD_FileVersion="7.26.4.0" >
+  <Instrument Type="11" >
+    <Name>SBE 19plus V2 Seacat CTD</Name>
+    <PressureSensorType>1</PressureSensorType>
+    <ExternalVoltageChannels>6</ExternalVoltageChannels>
+    <Mode>0</Mode>
+    <!-- Serial RS-232 Sensor: 10 = WET Labs. -->
+    <SerialRS232C_Sensor>10</SerialRS232C_Sensor>
+    <SampleIntervalSeconds>10</SampleIntervalSeconds>
+    <ScansToAverage>1</ScansToAverage>
+    <SurfaceParVoltageAdded>0</SurfaceParVoltageAdded>
+    <ScanTimeAdded>0</ScanTimeAdded>
+    <NmeaPositionDataAdded>0</NmeaPositionDataAdded>
+    <NmeaDepthDataAdded>0</NmeaDepthDataAdded>
+    <NmeaTimeAdded>0</NmeaTimeAdded>
+    <NmeaDeviceConnectedToPC>0</NmeaDeviceConnectedToPC>
+    <SensorArray Size="12" >
+      <Sensor index="0" SensorID="58" >
+        <TemperatureSensor SensorID="58" >
+          <SerialNumber>7674</SerialNumber>
+          <CalibrationDate>12-May-18</CalibrationDate>
+          <A0>1.25271996e-003</A0>
+          <A1>2.73893593e-004</A1>
+          <A2>-8.95032294e-007</A2>
+          <A3>1.72299295e-007</A3>
+          <Slope>1.00000000</Slope>
+          <Offset>0.0000</Offset>
+        </TemperatureSensor>
+      </Sensor>
+      <Sensor index="1" SensorID="3" >
+        <ConductivitySensor SensorID="3" >
+          <SerialNumber>7674</SerialNumber>
+          <CalibrationDate>12-May-18</CalibrationDate>
+          <UseG_J>1</UseG_J>
+          <!-- Cell const and series R are applicable only for wide range sensors. -->
+          <SeriesR>0.0000</SeriesR>
+          <CellConst>2000.0000</CellConst>
+          <ConductivityType>0</ConductivityType>
+          <Coefficients equation="0" >
+            <A>0.00000000e+000</A>
+            <B>0.00000000e+000</B>
+            <C>0.00000000e+000</C>
+            <D>0.00000000e+000</D>
+            <M>0.0</M>
+            <CPcor>-9.57000000e-008</CPcor>
+          </Coefficients>
+          <Coefficients equation="1" >
+            <G>-9.74963156e-001</G>
+            <H>1.32768967e-001</H>
+            <I>-1.75391392e-004</I>
+            <J>3.04853351e-005</J>
+            <CPcor>-9.57000000e-008</CPcor>
+            <CTcor>3.2500e-006</CTcor>
+            <!-- WBOTC not applicable unless ConductivityType = 1. -->
+            <WBOTC>0.00000000e+000</WBOTC>
+          </Coefficients>
+          <Slope>1.00000000</Slope>
+          <Offset>0.00000</Offset>
+        </ConductivitySensor>
+      </Sensor>
+      <Sensor index="2" SensorID="46" >
+        <PressureSensor SensorID="46" >
+          <SerialNumber>7674</SerialNumber>
+          <CalibrationDate>08-May-18</CalibrationDate>
+          <PA0>1.85719010e+000</PA0>
+          <PA1>3.16136532e-003</PA1>
+          <PA2>9.94293882e-011</PA2>
+          <PTEMPA0>1.69967073e+002</PTEMPA0>
+          <PTEMPA1>-4.99995110e+001</PTEMPA1>
+          <PTEMPA2>-2.32024142e+000</PTEMPA2>
+          <PTCA0>5.23349782e+005</PTCA0>
+          <PTCA1>1.33769407e+001</PTCA1>
+          <PTCA2>5.45960013e-001</PTCA2>
+          <PTCB0>2.49286250e+001</PTCB0>
+          <PTCB1>3.25000000e-004</PTCB1>
+          <PTCB2>0.00000000e+000</PTCB2>
+          <Offset>0.000000</Offset>
+        </PressureSensor>
+      </Sensor>
+      <Sensor index="3" SensorID="27" >
+        <NotInUse SensorID="27" >
+          <SerialNumber>RINKOT250</SerialNumber>
+          <CalibrationDate></CalibrationDate>
+          <OutputType>2</OutputType>
+          <Free>1</Free>
+        </NotInUse>
+      </Sensor>
+      <Sensor index="4" SensorID="27" >
+        <NotInUse SensorID="27" >
+          <SerialNumber>RINKODO250</SerialNumber>
+          <CalibrationDate></CalibrationDate>
+          <OutputType>2</OutputType>
+          <Free>1</Free>
+        </NotInUse>
+      </Sensor>
+      <Sensor index="5" SensorID="38" >
+        <OxygenSensor SensorID="38" >
+          <SerialNumber>3292</SerialNumber>
+          <CalibrationDate>01-May-18</CalibrationDate>
+          <Use2007Equation>1</Use2007Equation>
+          <CalibrationCoefficients equation="0" >
+            <!-- Coefficients for Owens-Millard equation. -->
+            <Boc>0.0000</Boc>
+            <Soc>0.0000e+000</Soc>
+            <offset>0.0000</offset>
+            <Pcor>0.00e+000</Pcor>
+            <Tcor>0.0000</Tcor>
+            <Tau>0.0</Tau>
+          </CalibrationCoefficients>
+          <CalibrationCoefficients equation="1" >
+            <!-- Coefficients for Sea-Bird equation - SBE calibration in 2007 and later. -->
+            <Soc>5.1779e-001</Soc>
+            <offset>-0.5089</offset>
+            <A>-3.4287e-003</A>
+            <B> 2.0565e-004</B>
+            <C>-3.0606e-006</C>
+            <D0> 2.5826e+000</D0>
+            <D1> 1.92634e-004</D1>
+            <D2>-4.64803e-002</D2>
+            <E> 3.6000e-002</E>
+            <Tau20> 1.3000</Tau20>
+            <H1>-3.3000e-002</H1>
+            <H2> 5.0000e+003</H2>
+            <H3> 1.4500e+003</H3>
+          </CalibrationCoefficients>
+        </OxygenSensor>
+      </Sensor>
+      <Sensor index="6" SensorID="42" >
+        <PAR_BiosphericalLicorChelseaSensor SensorID="42" >
+          <SerialNumber>70772</SerialNumber>
+          <CalibrationDate>07-Jan-2020</CalibrationDate>
+          <M>1.00000000</M>
+          <B>0.00000000</B>
+          <CalibrationConstant>105485000000.00000000</CalibrationConstant>
+          <Multiplier>1.00000000</Multiplier>
+          <Offset>-0.97097565</Offset>
+        </PAR_BiosphericalLicorChelseaSensor>
+      </Sensor>
+      <Sensor index="7" SensorID="33" >
+        <OBS_SeapointTurbiditySensor SensorID="33" >
+          <SerialNumber>15131</SerialNumber>
+          <CalibrationDate>31-May-2018</CalibrationDate>
+          <!-- The following is an array index, not the actual gain setting. -->
+          <GainSetting>2</GainSetting>
+          <ScaleFactor>1.000</ScaleFactor>
+        </OBS_SeapointTurbiditySensor>
+      </Sensor>
+      <Sensor index="8" SensorID="11" >
+        <FluoroSeapointSensor SensorID="11" >
+          <SerialNumber>3708</SerialNumber>
+          <CalibrationDate>31-May-2018</CalibrationDate>
+          <!-- The following is an array index, not the actual gain setting. -->
+          <GainSetting>3</GainSetting>
+          <Offset>0.000</Offset>
+        </FluoroSeapointSensor>
+      </Sensor>
+      <Sensor index="9" SensorID="71" >
+        <WET_LabsCStar SensorID="71" >
+          <SerialNumber>1737</SerialNumber>
+          <CalibrationDate>15-Jul-2015</CalibrationDate>
+          <M>0.0065</M>
+          <B>0.0000</B>
+          <PathLength>0.250</PathLength>
+        </WET_LabsCStar>
+      </Sensor>
+      <Sensor index="10" SensorID="27" >
+        <NotInUse SensorID="27" >
+          <SerialNumber></SerialNumber>
+          <CalibrationDate></CalibrationDate>
+          <OutputType>0</OutputType>
+          <Free>1</Free>
+        </NotInUse>
+      </Sensor>
+      <Sensor index="11" SensorID="27" >
+        <NotInUse SensorID="27" >
+          <SerialNumber></SerialNumber>
+          <CalibrationDate></CalibrationDate>
+          <OutputType>0</OutputType>
+          <Free>1</Free>
+        </NotInUse>
+      </Sensor>
+    </SensorArray>
+  </Instrument>
+</SBE_InstrumentConfiguration>
