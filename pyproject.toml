@@ -18,6 +18,8 @@ pydantic-settings = "^2.0.2"
 pre-commit = "^3.3.3"
 ruff = "^0.0.280"
 black = "^23.7.0"
+
+[tool.poetry.group.test.dependencies]
 pytest = "^7.4.0"
 
 [build-system]
