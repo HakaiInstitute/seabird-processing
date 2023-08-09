@@ -52,7 +52,7 @@ jobs:
       - name: Update version strings
         run: |
           poetry version ${{ env.tag }}
-          sed -i "s/0.0.0/${{ env.tag }}/g" seabird_sbe/__init__.py
+          sed -i "s/0.0.0/${{ env.tag }}/g" seabird_processing/__init__.py
 
       - name: Build
         run: poetry build
