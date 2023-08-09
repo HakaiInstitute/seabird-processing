@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Loop_Edit >
+  <Version value="7.23.2" />
+  <ServerName value="Loop Edit" />
+  <InputDir value="Z:\Users\Mark\research\hakai\seabird\testing\5_thermal" />
+  <InputFileArray size="28" GrowBy="-1" >
+    <ArrayItem index="0" value="SBE19plus_01907467_2015_05_21_0001.cnv" />
+    <ArrayItem index="1" value="SBE19plus_01907467_2015_05_21_0002.cnv" />
+    <ArrayItem index="2" value="SBE19plus_01907467_2015_05_21_0003.cnv" />
+    <ArrayItem index="3" value="SBE19plus_01907467_2015_05_21_0004.cnv" />
+    <ArrayItem index="4" value="SBE19plus_01907467_2015_05_21_0005.cnv" />
+    <ArrayItem index="5" value="SBE19plus_01907467_2015_05_21_0006.cnv" />
+    <ArrayItem index="6" value="SBE19plus_01907467_2015_05_21_0007.cnv" />
+    <ArrayItem index="7" value="SBE19plus_01907467_2015_05_21_0008.cnv" />
+    <ArrayItem index="8" value="SBE19plus_01907467_2015_05_21_0009.cnv" />
+    <ArrayItem index="9" value="SBE19plus_01907467_2015_08_20_0001.cnv" />
+    <ArrayItem index="10" value="SBE19plus_01907467_2015_08_20_0002.cnv" />
+    <ArrayItem index="11" value="SBE19plus_01907467_2015_08_20_0003.cnv" />
+    <ArrayItem index="12" value="SBE19plus_01907467_2015_08_20_0004.cnv" />
+    <ArrayItem index="13" value="SBE19plus_01907467_2015_08_20_0005.cnv" />
+    <ArrayItem index="14" value="SBE19plus_01907467_2015_08_20_0007.cnv" />
+    <ArrayItem index="15" value="SBE19plus_01907467_2015_08_20_0008.cnv" />
+    <ArrayItem index="16" value="SBE19plus_01907467_2015_08_20_0009.cnv" />
+    <ArrayItem index="17" value="SBE19plus_01907467_2015_08_20_0010.cnv" />
+    <ArrayItem index="18" value="SBE19plus_01907467_2015_11_25_0001.cnv" />
+    <ArrayItem index="19" value="SBE19plus_01907467_2015_11_25_0002.cnv" />
+    <ArrayItem index="20" value="SBE19plus_01907467_2015_11_25_0003.cnv" />
+    <ArrayItem index="21" value="SBE19plus_01907467_2015_11_25_0004.cnv" />
+    <ArrayItem index="22" value="SBE19plus_01907467_2015_11_25_0005.cnv" />
+    <ArrayItem index="23" value="SBE19plus_01907467_2015_11_25_0006.cnv" />
+    <ArrayItem index="24" value="SBE19plus_01907467_2015_11_25_0007.cnv" />
+    <ArrayItem index="25" value="SBE19plus_01907467_2015_11_25_0008.cnv" />
+    <ArrayItem index="26" value="SBE19plus_01907467_2015_11_25_0009.cnv" />
+    <ArrayItem index="27" value="SBE19plus_01907467_2015_11_25_0010.cnv" />
+  </InputFileArray>
+  <OutputDir value="Z:\Users\Mark\research\hakai\seabird\testing\6_loop" />
+  <NameAppend value="" />
+  <OutputFile value="" />
+  <LastProcessed value="0" />
+  <MinVelocityType value="0" high="1" low="0" initialValue="0" />
+  <MinCTD_Velocity value="0.250000" />
+  <TimeWindowSize value="300.000000" />
+  <PercentMeanSpeed value="20.000000" />
+  <ExcludeMarkedBad value="1" />
+  <RemoveSurfaceSoak value="1" />
+  <UseDeckPressure value="1" />
+  <SurfaceSoakDepth value="2.000000" />
+  <SurfaceSoakDepthMin value="1.000000" />
+  <SurfaceSoakDepthMax value="4.500000" />
+</Loop_Edit>

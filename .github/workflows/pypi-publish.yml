@@ -1,0 +1,65 @@
+name: Publish
+
+on:
+  push:
+    branches-ignore:
+      - '**'
+    tags:
+      - 'v[0-9]+.[0-9]+.[0-9]+'
+      - 'v[0-9]+.[0-9]+.[0-9]+dev[0-9]+'  # dev tags
+      - 'v[0-9]+.[0-9]+.[0-9]+a[0-9]+'  # alpha tags
+      - 'v[0-9]+.[0-9]+.[0-9]+b[0-9]+'  # beta tags
+      - 'v[0-9]+.[0-9]+.[0-9]+rc[0-9]+'  # release candidate tags
+
+jobs:
+  Publish:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Get tag
+        id: tag
+        run: echo "tag=${GITHUB_REF#refs/tags/}" >> $GITHUB_ENV
+
+      - name: Detect pre-release tag
+        run: |
+          if [[ ${{ env.tag }} =~ ^v[0-9]+.[0-9]+.[0-9]+rc[0-9]+$ ]]; then
+              echo "pre_release=true" >> $GITHUB_ENV
+          elif [[ ${{ env.tag }} =~ ^v[0-9]+.[0-9]+.[0-9]+a[0-9]+$ ]]; then
+              echo "alpha_release=true" >> $GITHUB_ENV
+          elif [[ ${{ env.tag }} =~ ^v[0-9]+.[0-9]+.[0-9]+b[0-9]+$ ]]; then
+                echo "beta_release=true" >> $GITHUB_ENV
+          elif [[ ${{ env.tag }} =~ ^v[0-9]+.[0-9]+.[0-9]+dev[0-9]+$ ]]; then
+                echo "dev_release=true" >> $GITHUB_ENV
+          fi
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Setup Poetry
+        uses: abatilo/actions-poetry@v2.0.0
+        with:
+          poetry-version: 1.2.2
+
+      - name: Install dependencies
+        run: |
+          poetry update
+          poetry run pip install --upgrade setuptools
+
+      - name: Update version strings
+        run: |
+          poetry version ${{ env.tag }}
+          sed -i "s/0.0.0/${{ env.tag }}/g" seabird_processing/__init__.py
+
+      - name: Build
+        run: poetry build
+
+      - name: Publish
+        if: ${{ !env.ACT }}  # skip during local actions testing
+        env:
+          POETRY_PYPI_TOKEN_PYPI: ${{ secrets.PYPI_TOKEN }}
+        run: |
+          poetry publish
