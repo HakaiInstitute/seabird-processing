@@ -53,7 +53,7 @@ filtered = filter_(cnvfile, './output/dir', xmlcon, './psa/AlignCTD.psa')
 # ...
 ```
 
-### Pipeline processing
+### Batch processing
 
 ```python
 from seabird_processing import Batch, configs
