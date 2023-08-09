@@ -26,10 +26,10 @@ To install this tool in your current python environment do:
 ```pip install seabird-processing```
 
 Configure the tool with the location of your Seabird Processing Suite installation by
-setting the `SBE_PROCESSING_PATH` environment variable. For example, if you installed the
+setting the `SBE_BIN_DIR` environment variable. For example, if you installed the
 software to `C:\Program Files (x86)\Seabird\SBEDataProcessing-Win32` then you would set
 the environment
-variable `SBE_PROCESSING_PATH=C:\Program Files (x86)\Seabird\SBEDataProcessing-Win32\`.
+variable `SBE_BIN_DIR=C:\Program Files (x86)\Seabird\SBEDataProcessing-Win32\`.
 By default, it is assumed that the software is installed
 to `C:\Program Files (x86)\Seabird\SBEDataProcessing-Win32`.
 

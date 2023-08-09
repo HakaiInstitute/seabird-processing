@@ -14,13 +14,12 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
 class _Settings(BaseSettings):
-    model_config = SettingsConfigDict(env_file=".env", env_file_encoding="utf-8")
-
-    sbe_processing_path: DirectoryPath = (
-        r"C:\Program Files (x86)\Sea-Bird\SBEDataProcessing-Win32"
+    model_config = SettingsConfigDict(
+        env_file=".env", env_file_encoding="utf-8", env_prefix="sbe_"
     )
 
-    sbe_command_timeout: int = 60 * 2  # 2 minutes
+    bin_dir: DirectoryPath = r"C:\Program Files (x86)\Sea-Bird\SBEDataProcessing-Win32"
+    command_timeout: int = 60 * 2  # 2 minutes
 
 
 @lru_cache()

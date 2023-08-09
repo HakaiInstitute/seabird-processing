@@ -39,13 +39,13 @@ class _SBEConfig(BaseModel, abc.ABC):
             int: The timeout for the command
         """
         settings = load_settings()
-        return settings.sbe_command_timeout
+        return settings.command_timeout
 
     @property
     def _exe_path(self) -> str:
         """Return the full path to the executable."""
         settings = load_settings()
-        return f"{settings.sbe_processing_path}/{self._exe_name}"
+        return f"{settings.bin_dir}/{self._exe_name}"
 
     def output_file_path(self, input_file: Union[Path, str]) -> str:
         """Get the path to the output file.
