@@ -1,6 +1,6 @@
 # Seabird-Processing
 
-Python bindings for executing Seabird SBE processing tools.
+Execute Seabird Processing Toolbox functions with Python.
 
 ## Description
 
