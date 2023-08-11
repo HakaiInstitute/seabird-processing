@@ -2,14 +2,6 @@
 
 Execute Seabird Processing Toolbox functions with Python.
 
-## Description
-
-This library contains an API for executing seabird SBE processing modules on Seabird
-data files (hex and cnv). The modules all accept text as input which allows for more
-convenient access to the command line functions which would normally require a file path
-as input. Under the hood, this library simply saves temporary files which are then
-processed through SBE, read into memory, and returned as in-memory text.
-
 ## Installation
 
 ### Pre-requisites
@@ -36,9 +28,8 @@ to `C:\Program Files (x86)\Seabird\SBEDataProcessing-Win32`.
 ## Usage
 
 There are two ways to use this library. The first is to use individual functions which
-correspond one-to-one with the SBE processing modules. The second is to use
-the `Pipeline`
-class which allows you to chain together multiple processing modules.
+correspond one-to-one with the Searbird processing modules. The second is to use
+the `Batch` class which allows you to chain together multiple processing modules.
 
 ### Command line functions
 
@@ -60,7 +51,7 @@ from seabird_processing import Batch, configs
 
 xmlcon = './path/to/xmlcon/12-3456.xmlcon'
 
-# Create a pipeline with some config files
+# Create a batch executor and configure each step
 batch = Batch([
     configs.DatCnvConfig(
         # `output_file_suffix` is optional
